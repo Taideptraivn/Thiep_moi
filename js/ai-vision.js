@@ -1,0 +1,9 @@
+const photos = [
+    "images/gallery/img1.jpg",
+    "images/gallery/img2.jpg",
+    "images/gallery/img3.jpg"
+];
+
+function changePhoto(){
+
+}

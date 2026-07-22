@@ -1,0 +1,11 @@
+@media(max-width:768px){
+
+    .content{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:1.8rem;
+    }
+
+}
