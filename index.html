@@ -1,33 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Mời Tốt Nghiệp</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/countdown.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/ai-vision.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
 <body>
 
-    <canvas id="matrix"></canvas>
+    <!-- Popup Thư Mời -->
+    <div id="letterModal" class="letter-modal">
 
-    <div class="card">
+        <div class="letter-container">
 
-        <!-- Header -->
-        <section class="hero-section">
-        </section>
+            <button
+                class="close-letter"
+                onclick="closeLetter()">
 
-        <!-- Thông tin -->
-        <section class="info-section">
-        </section>
+                ✕
 
-        <!-- Countdown -->
-        <section class="countdown-section">
-        </section>
+            </button>
 
-        <!-- Album -->
-        <section class="gallery-section">
-        </section>
+            <div class="letter-header">
+                🎓 THƯ MỜI TỐT NGHIỆP 🎓
+            </div>
 
-        <!-- AI Vision -->
-        <section class="vision-section">
-        </section>
+            <div class="letter-content">
 
-        <!-- Footer -->
-        <footer>
-        </footer>
+                <p>
+                    Để đánh dấu cột mốc trưởng thành 4 năm đại học,
+                    mình trân trọng mời các bạn đến tham dự
+                    buổi lễ tốt nghiệp của mình.
+                </p>
+
+                <p>
+                    Sự hiện diện của các bạn sẽ làm cho ngày đặc biệt này
+                    trở nên ý nghĩa hơn.
+                </p>
+
+                <p>
+                    Nhìn lại hành trình 4 năm, đó là một chặng đường đầy thử thách
+                    và cũng đầy kỷ niệm đẹp, từ những đêm thức trắng ôn thi
+                    đến những giờ lên lớp căng thẳng.
+                </p>
+
+                <p>
+                    Tất cả những khoảnh khắc ấy đã giúp mình trưởng thành hơn
+                    và có được kết quả như ngày hôm nay.
+                </p>
+
+                <p>
+                    Sự đồng hành và ủng hộ của các bạn là nguồn động viên
+                    vô cùng to lớn đối với mình.
+                </p>
+                <p>Cảm ơn ChatGPT, Gemini, Claude, Microsoft Copilot, 
+                    Meta AI, Grok, Perplexity, Poe, Character.AI, DeepSeek,
+                     Pi, Mistral AI, Qwen, Jasper, Copy.ai...
+                     đã cùng mình vượt qua những khó khăn trong học tập và nghiên cứu.
+                </p>
+                <p>
+                    Mình rất mong được chia sẻ niềm vui này cùng các bạn,
+                    để cùng nhau nhìn lại chặng đường đã qua
+                    và cùng hướng tới một tương lai tươi sáng hơn.
+                </p>
+
+                <p>
+                    Chân thành cảm ơn các bạn đã luôn ở bên mình.
+                </p>
+
+                <p class="signature">
+                    Trân trọng ❤️
+                    <br><br>
+                    <strong>Mai Đặng Đức Tài</strong>
+                </p>
+
+            </div>
+
+        </div>
 
     </div>
 
+    <!-- Matrix Background -->
+    <canvas id="matrix"></canvas>
+
+    <!-- Main Card -->
+    <div class="card">
+
+        <span class="badge">🎓 CLASS OF 2026</span>
+
+        <h1>
+            LỄ TỐT NGHIỆP<br>
+            ĐẠI HỌC QUY NHƠN
+        </h1>
+
+        <p class="subtitle">
+            AI Graduate | Specializing in Computer Vision & NLP
+        </p>
+
+        <div class="content">
+
+            <div class="left">
+
+                <div class="avatar-wrapper">
+
+                    <img
+                        src="Anh/13.jpg"
+                        alt="Avatar"
+                        class="avatar">
+
+                    <div class="avatar-decor"></div>
+
+                </div>
+
+                <div class="countdown">
+
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <label>Ngày</label>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <label>Giờ</label>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="mins">00</span>
+                        <label>Phút</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="right">
+
+                <div class="info">
+
+                    <div class="info-item">
+                        <span class="highlight">SINH VIÊN:</span>
+                        <span>Mai Đặng Đức Tài</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="highlight">NGÀNH:</span>
+                        <span>Trí Tuệ Nhân Tạo</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="highlight">THỜI GIAN:</span>
+                        <span>09:00 AM - 30/07/2026</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="highlight">ĐỊA ĐIỂM:</span>
+                        <span>Hội Trường B - Đại Học Quy Nhơn</span>
+                    </div>
+
+                    <div class="info-item">
+
+                        <span
+                            class="highlight invite-btn"
+                            onclick="openLetter()">
+
+                            📩 Click vào đây đi
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <button onclick="celebrate()" class="btn">
+                    XÁC NHẬN THAM DỰ
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- AI Vision -->
+        <div class="ai-vision-container">
+
+            <div class="vision-header">
+                <span>[ Những kỉ niệm ]</span>
+                <span id="photo-index">IMG_ID: 001</span>
+            </div>
+
+            <div class="photo-display-area">
+
+                <div class="scanline"></div>
+
+                <img id="random-photo" src="" alt="Memory">
+
+                <div id="status-text" class="processing-text">
+                    ANALYZING MEMORY...
+                </div>
+
+            </div>
+
+        </div>
+        <div class="footer">
+            &lt;coded_by_Tai_AI /&gt;<br>
+            Graduation Invitation Website 2026
+        </div>
+
+    </div>
+
+    <script src="js/matrix.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/confetti.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/ai-vision.js"></script>
+
 </body>
+</html>

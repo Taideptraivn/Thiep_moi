@@ -1,11 +1,23 @@
-@media(max-width:768px){
+@media (max-width:768px){
 
     .content{
         grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .card{
+        padding:30px;
     }
 
     h1{
         font-size:1.8rem;
     }
 
+    .info-item{
+        justify-content:center;
+    }
+
+    .countdown{
+        justify-content:center;
+    }
 }

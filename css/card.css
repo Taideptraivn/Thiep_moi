@@ -1,6 +1,237 @@
-.badge{}
-.hero-title{}
-.subtitle{}
-.avatar{}
-.avatar-wrapper{}
-.info-item{}
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    background: linear-gradient(90deg,var(--primary),var(--secondary));
+    color: #001b2e;
+    font-weight: 700;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg,var(--primary),var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    color: #8892b0;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 2px solid var(--primary);
+    position: relative;
+    z-index: 2;
+}
+
+.avatar-decor {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--secondary);
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.highlight {
+    color: var(--primary);
+    font-weight: 600;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.btn {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 15px 35px;
+    background: linear-gradient(90deg,var(--primary),var(--secondary));
+    color: #001b2e;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 12px;
+    transition: .3s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: .8rem;
+    color: #495670;
+    text-align: center;
+}
+.invite-title{
+    cursor:pointer;
+    color:var(--primary);
+    transition:.3s;
+}
+
+.invite-title:hover{
+    color:var(--secondary);
+}
+
+.invite-content{
+    display:none;
+    margin-top:10px;
+    padding:15px;
+    border-left:3px solid var(--primary);
+    background:rgba(255,255,255,0.05);
+    border-radius:10px;
+    line-height:1.8;
+}
+.invite-btn{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.invite-btn:hover{
+    color:var(--secondary);
+}
+
+/* Overlay */
+
+.letter-modal{
+    position:fixed;
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,0.55);
+
+    backdrop-filter:blur(10px);
+
+    z-index:9999;
+}
+
+/* Lá thư */
+
+.letter-container{
+
+    width:90%;
+    max-width:800px;
+
+    max-height:85vh;
+
+    overflow-y:auto;
+
+    background:#fffdf7;
+
+    color:#222;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    position:relative;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.35);
+
+    animation:letterOpen .35s ease;
+}
+
+@keyframes letterOpen{
+
+    from{
+        opacity:0;
+        transform:scale(0.85);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.close-letter{
+
+    position:absolute;
+    top:15px;
+    right:15px;
+
+    width:40px;
+    height:40px;
+
+    border:none;
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    background:#eee;
+}
+
+.close-letter:hover{
+    background:#ddd;
+}
+
+.letter-header{
+
+    text-align:center;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    margin-bottom:30px;
+
+    color:#0a192f;
+}
+
+.letter-content{
+
+    line-height:2;
+
+    font-size:18px;
+}
+
+.letter-content p{
+
+    margin-bottom:18px;
+}
+
+.signature{
+
+    margin-top:30px;
+
+    text-align:right;
+
+    font-style:italic;
+}
